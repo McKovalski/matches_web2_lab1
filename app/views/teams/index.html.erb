@@ -1,0 +1,36 @@
+<% unless notice.nil? %>
+  <div class="alert alert-success" role="alert"><%= notice %></div>
+<% end %>
+
+<h1>Standings</h1>
+<br/>
+
+<table class="table table-striped table-bordered table-hover text-center">
+    <thead class="thead-dark">
+      <tr>
+        <th>Rank</th>
+        <th>Team Name (Team Id)</th>
+        <th>Points</th>
+        <th>Games</th>
+        <th>Wins</th>
+        <th>Draws</th>
+        <th>Losses</th>
+        <th>Goal Difference</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @team_wrappers_list.each_with_index do |wrapper, index| %>
+        <tr>
+          <td><%= index + 1 %></td>
+          <td><%= wrapper.name + " (" + wrapper.id.to_s + ")" %></td>
+          <td><%= wrapper.points %></td>
+          <td><%= wrapper.games %></td>
+          <td><%= wrapper.wins %></td>
+          <td><%= wrapper.draws %></td>
+          <td><%= wrapper.losses %></td>
+          <td><%= wrapper.goal_difference %></td>
+        </tr>
+      <% end %>
+    </tbody>
+</table>

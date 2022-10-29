@@ -1,0 +1,44 @@
+<%= form_with(model: match) do |form| %>
+  <% if match.errors.any? %>
+    <div class="alert alert-danger" role="alert">
+      <h2><%= pluralize(match.errors.count, "error") %> prohibited this match from being saved:</h2>
+
+      <ul>
+        <% match.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.label :time_of_play, style: "display: block" %>
+    <%= form.datetime_field :time_of_play, class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :home_team_id, style: "display: block" %>
+    <%= form.number_field :home_team_id, class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :away_team_id, style: "display: block" %>
+    <%= form.number_field :away_team_id, class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :home_team_score, style: "display: block" %>
+    <%= form.number_field :home_team_score, class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :away_team_score, style: "display: block" %>
+    <%= form.number_field :away_team_score, class:"form-control" %>
+  </div>
+
+  <br/>
+
+  <div class="actions">
+    <%= form.submit class:'btn btn-secondary' %>
+  </div>
+<% end %>
