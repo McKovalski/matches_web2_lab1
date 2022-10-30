@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Implementirano je: (sve)
+* prikaz rasporeda i rezultata te trenutne tablice
+* prijava korisnika i prikaz trenutno prijavljenog korisnika
+* unos i izmjena rezultata
+* rad s komentarima (prikaz, dodavanje, brisanje, ažuriranje)
+   
+Korisnicki racuni:
+* lecajan921@inkmoto.com (User)
+* legidon249@cadolls.com (User)
+* velara8158@cadolls.com (Admin)
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Lozinke su sve racune su iste: Password123
